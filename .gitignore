@@ -1,0 +1,11 @@
+
+### CakePHP template
+tmp/*
+[Cc]onfig/database.php
+!empty
+
+### Composer installed packages
+Plugin/DebugKit
+Vendor/*
+
+

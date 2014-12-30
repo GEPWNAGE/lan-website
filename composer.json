@@ -1,0 +1,11 @@
+{
+    "name": "gepwnage/lan-website",
+    "description": "Website to manage a LAN event with content management, participant registration and competitions.",
+    "require": {
+        "cakephp/cakephp": "2.6.*",
+        "cakephp/debug_kit": "2.2.*"
+    },
+    "config": {
+        "vendor-dir": "Vendor/"
+    }
+}

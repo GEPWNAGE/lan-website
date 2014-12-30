@@ -1,0 +1,203 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "18d3fa5319e0e8a9209c5431bf1d1cd6",
+    "packages": [
+        {
+            "name": "cakephp/cakephp",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/cakephp.git",
+                "reference": "02ca7f5fcb77e18ed0512c847135336fba98398c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/02ca7f5fcb77e18ed0512c847135336fba98398c",
+                "reference": "02ca7f5fcb77e18ed0512c847135336fba98398c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mcrypt": "*",
+                "php": ">=5.2.8"
+            },
+            "require-dev": {
+                "cakephp/debug_kit": "2.2.*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "bin": [
+                "lib/Cake/Console/cake"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/cakephp/graphs/contributors"
+                }
+            ],
+            "description": "The CakePHP framework",
+            "homepage": "http://cakephp.org",
+            "keywords": [
+                "framework"
+            ],
+            "time": "2014-12-23 16:26:27"
+        },
+        {
+            "name": "cakephp/debug_kit",
+            "version": "2.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/debug_kit.git",
+                "reference": "c91103061d9b7ec3141e642913f88090a292b2bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/c91103061d9b7ec3141e642913f88090a292b2bf",
+                "reference": "c91103061d9b7ec3141e642913f88090a292b2bf",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                },
+                "installer-name": "DebugKit"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Story",
+                    "homepage": "http://mark-story.com",
+                    "role": "Author"
+                },
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/debug_kit/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP Debug Kit",
+            "homepage": "https://github.com/cakephp/debug_kit",
+            "keywords": [
+                "cakephp",
+                "debug",
+                "kit"
+            ],
+            "time": "2014-11-22 17:58:32"
+        },
+        {
+            "name": "composer/installers",
+            "version": "v1.0.19",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "89d77bfbee79e16653f7162c86e602cc188471db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/89d77bfbee79e16653f7162c86e602cc188471db",
+                "reference": "89d77bfbee79e16653f7162c86e602cc188471db",
+                "shasum": ""
+            },
+            "replace": {
+                "roundcube/plugin-installer": "*",
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "composer-installer",
+            "extra": {
+                "class": "Composer\\Installers\\Installer",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Composer\\Installers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "http://composer.github.com/installers/",
+            "keywords": [
+                "Craft",
+                "Dolibarr",
+                "Hurad",
+                "MODX Evo",
+                "OXID",
+                "Thelia",
+                "WolfCMS",
+                "agl",
+                "annotatecms",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "elgg",
+                "fuelphp",
+                "grav",
+                "installer",
+                "joomla",
+                "kohana",
+                "laravel",
+                "lithium",
+                "magento",
+                "mako",
+                "mediawiki",
+                "modulework",
+                "moodle",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "puppet",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "symfony",
+                "typo3",
+                "wordpress",
+                "zend",
+                "zikula"
+            ],
+            "time": "2014-11-29 01:29:17"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
