@@ -4,8 +4,54 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "18d3fa5319e0e8a9209c5431bf1d1cd6",
+    "hash": "8d7a32b5af79c5056fbf9f799cef9f19",
     "packages": [
+        {
+            "name": "burriko/cake-soft-delete",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/burriko/cakephp-soft-delete.git",
+                "reference": "f61b9e8584b0e4a14cdbddf950f15072e8725a97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/burriko/cakephp-soft-delete/zipball/f61b9e8584b0e4a14cdbddf950f15072e8725a97",
+                "reference": "f61b9e8584b0e4a14cdbddf950f15072e8725a97",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graeme Tait",
+                    "homepage": "http://graemetait.co.uk",
+                    "role": "Author"
+                }
+            ],
+            "description": "Soft delete for CakePHP models.",
+            "homepage": "https://github.com/burriko/cakephp-soft-delete",
+            "keywords": [
+                "Behavior",
+                "cakephp",
+                "deletable",
+                "delete",
+                "soft"
+            ],
+            "time": "2013-08-14 09:10:26"
+        },
         {
             "name": "cakephp/cakephp",
             "version": "2.6.0",
@@ -195,7 +241,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "burriko/cake-soft-delete": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

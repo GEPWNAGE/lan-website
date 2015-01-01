@@ -23,4 +23,13 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 	public $components = array("DebugKit.Toolbar");
+
+	public function beforeFilter(){
+		parent::beforeFilter();
+
+		//set admin theme if in admin environment
+		if($this->request->param('prefix') == 'admin'){
+			$this->theme = "Admin";
+		}
+	}
 }

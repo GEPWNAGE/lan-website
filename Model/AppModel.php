@@ -11,6 +11,7 @@
  */
 
 App::uses('Model', 'Model');
+App::uses('SoftDeletableModel', 'CakeSoftDelete.Model');
 
 /**
  * Application model for Cake.
@@ -20,5 +21,6 @@ App::uses('Model', 'Model');
  *
  * @package       app.Model
  */
-class AppModel extends Model {
+class AppModel extends SoftDeletableModel {
+    public $actsAs = array('CakeSoftDelete.SoftDeletable');
 }

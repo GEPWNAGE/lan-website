@@ -40,7 +40,8 @@ class PagesController extends AppController {
 
 		$count = count($path);
 		if (!$count) {
-			return $this->redirect('/');
+			$this->redirect('/');
+			return;
 		}
 		$page = $subpage = $title_for_layout = null;
 
@@ -55,13 +56,52 @@ class PagesController extends AppController {
 		}
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 
-		try {
-			$this->render(implode('/', $path));
-		} catch (MissingViewException $e) {
-			if (Configure::read('debug')) {
-				throw $e;
-			}
-			throw new NotFoundException();
-		}
+        $page = $this->Page->find("first", array("conditions" => array("Page.slug" => $path[0])));
+        if($page){
+            $title_for_layout = $page['Page']['title'];
+            $this->set(compact('page', 'title_for_layout'));
+        } else {
+            try{
+                $this->render(implode('/', $path));
+            } catch (MissingViewException $e){
+                if(Configure::read('debug')){
+                    throw $e;
+                }
+                throw new NotFoundException();
+            }
+        }
+	}
+
+	public function beforeFilter(){
+		$title_for_layout = "Pages";
+		$icon_for_layout = "file-o";
+		$this->set(compact(array("title_for_layout", "icon_for_layout")));
+		parent::beforeFilter();
+	}
+
+	public function admin_index(){
+		$pages = $this->Page->find('all', array("orderby" => array("Page.title")));
+		$this->set(compact(array("pages")));
+	}
+	public function admin_add(){
+        if($this->request->is('post')){
+            if($this->Page->save($this->request->data)){
+                $this->redirect(array("controller" => "pages", "action" => "index", "admin" => true));
+                return;
+            }
+        }
+	}
+	public function admin_edit($id){
+		if($this->request->is('put')){
+			if($this->Page->save($this->request->data)){
+                $this->redirect(array("controller" => "pages", "action" => "index", "admin" => true));
+                return;
+            }
+        } else {
+            $page = $this->Page->find('first', array("Page.id" => $id));
+            $this->request->data = $page;
+        }
+
+		$this->set(compact(array("page")));
 	}
 }
