@@ -16,11 +16,15 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
+
+	$languages = implode("|", array_keys(Configure::read("Languages.available")));
+	Router::connect('/:language/:controller/:action/*', array(), array('language' => $languages));
+	Router::connect('/:language/:controller', array('action' => 'index'), array('language' => $languages));
+	Router::connect('/:language/', array('controller' => 'pages', 'action' => 'display', 'home'), array('language' => $languages));
+
+	Router::connect('/admin/', array('controller' => 'pages', 'action' => 'index', 'prefix' => 'admin'));
+	Router::connect('/:slug', array('controller' => 'pages', 'action' => 'display'), array("pass" => array("slug")), array("slug" => "(?!admin)"));
 	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
-	Router::connect('/admin/:controller', array('controller' => ':controller', 'action' => 'index', 'admin' => true));
-	Router::connect('/admin/:controller/:action', array('controller' => ':controller', 'action' => ':action', 'admin' => true));
-	Router::connect('/:controller/:action', array('controller' => ':controller', 'action' => ':action'));
-	Router::connect('/:slug', array('controller' => 'pages', 'action' => 'display'), array("pass" => array("slug")));
 
 /**
  * ...and connect the rest of 'Pages' controller's URLs.

@@ -16,6 +16,8 @@ App::uses('AppController', 'Controller');
  *
  * Override this controller by placing a copy in controllers directory of an application
  *
+ * @property Page $Page
+ *
  * @package       app.Controller
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
@@ -86,22 +88,28 @@ class PagesController extends AppController {
 	public function admin_add(){
         if($this->request->is('post')){
             if($this->Page->save($this->request->data)){
+				$this->Page->saveReverseTranslation($this->request->data);
                 $this->redirect(array("controller" => "pages", "action" => "index", "admin" => true));
                 return;
             }
         }
+		$originals = $this->Page->getOriginals();
+		$this->set(compact(array("originals")));
 	}
 	public function admin_edit($id){
 		if($this->request->is('put')){
 			if($this->Page->save($this->request->data)){
+//				debug($this->request->data);
+				$this->Page->saveReverseTranslation($this->request->data);
                 $this->redirect(array("controller" => "pages", "action" => "index", "admin" => true));
                 return;
             }
         } else {
-            $page = $this->Page->find('first', array("Page.id" => $id));
+            $page = $this->Page->find('first', array("conditions" => array("Page.id" => $id)));
             $this->request->data = $page;
         }
 
-		$this->set(compact(array("page")));
+		$originals = $this->Page->getOriginals($id);
+		$this->set(compact(array("page", "originals")));
 	}
 }

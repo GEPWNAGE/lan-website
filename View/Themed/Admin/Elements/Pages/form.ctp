@@ -26,6 +26,24 @@ $add = $this->request->param('action') == "admin_add";
             </div>
         </div>
         <div class="form-group">
+            <label class="col-lg-2 control-label">Language</label>
+            <div class="col-lg-5">
+                <?= $this->Form->input("Page.language", array("class" => "form-control", "options" => Configure::read("Languages.available")));?>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Translation of</label>
+            <div class="col-lg-5">
+                <?= $this->Form->input("Translation.0.id", array("class" => "form-control", "options" => $originals, 'empty' => 'nothing'));?>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Homepage</label>
+            <div class="col-lg-5">
+                <?= $this->Form->input("Page.homepage", array("style" => "margin-top: 11px;"));?>
+            </div>
+        </div>
+        <div class="form-group">
             <label class="col-lg-2 control-label">Content</label>
             <div class="col-lg-5">
                 <?= $this->Form->textarea("Page.content", array("class" => "cleditor"));?>
