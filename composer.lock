@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8d7a32b5af79c5056fbf9f799cef9f19",
+    "hash": "df20677fd6c94c49fbe079f51a6ef9a9",
     "packages": [
         {
             "name": "burriko/cake-soft-delete",
@@ -54,16 +54,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "2.6.0",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "02ca7f5fcb77e18ed0512c847135336fba98398c"
+                "reference": "09e5e43d0950bcee1b1792bc1355492024a5e54c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/02ca7f5fcb77e18ed0512c847135336fba98398c",
-                "reference": "02ca7f5fcb77e18ed0512c847135336fba98398c",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/09e5e43d0950bcee1b1792bc1355492024a5e54c",
+                "reference": "09e5e43d0950bcee1b1792bc1355492024a5e54c",
                 "shasum": ""
             },
             "require": {
@@ -93,7 +93,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-12-23 16:26:27"
+            "time": "2015-01-16 02:36:35"
         },
         {
             "name": "cakephp/debug_kit",
@@ -146,16 +146,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.19",
+            "version": "v1.0.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "89d77bfbee79e16653f7162c86e602cc188471db"
+                "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/89d77bfbee79e16653f7162c86e602cc188471db",
-                "reference": "89d77bfbee79e16653f7162c86e602cc188471db",
+                "url": "https://api.github.com/repos/composer/installers/zipball/1bff8aa77a18f3616f468ed8000cf86a5725bac3",
+                "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3",
                 "shasum": ""
             },
             "replace": {
@@ -197,6 +197,7 @@
                 "Hurad",
                 "MODX Evo",
                 "OXID",
+                "SMF",
                 "Thelia",
                 "WolfCMS",
                 "agl",
@@ -235,14 +236,57 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-11-29 01:29:17"
+            "time": "2015-01-11 03:51:11"
+        },
+        {
+            "name": "eberfreitas/cakephp-slugomatic",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eberfreitas/cakephp-slugomatic.git",
+                "reference": "aa9edd8f0f0c5612b4fbb32a09cf30a7b8ac5136"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eberfreitas/cakephp-slugomatic/zipball/aa9edd8f0f0c5612b4fbb32a09cf30a7b8ac5136",
+                "reference": "aa9edd8f0f0c5612b4fbb32a09cf30a7b8ac5136",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "Slugomatic"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Éber Freitas Dias",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "CakePHP behavior to automatically create slugs for your URLs from database records",
+            "homepage": "http://github.com/eberfreitas/cakephp-slugomatic",
+            "keywords": [
+                "Behavior",
+                "cakephp",
+                "plugin",
+                "seo",
+                "slug"
+            ],
+            "time": "2014-06-26 19:46:31"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "burriko/cake-soft-delete": 20
+        "burriko/cake-soft-delete": 20,
+        "eberfreitas/cakephp-slugomatic": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

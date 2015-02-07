@@ -4,7 +4,8 @@
     "require": {
         "cakephp/cakephp": "2.6.*",
         "cakephp/debug_kit": "2.2.*",
-        "burriko/cake-soft-delete": "2.0.*@dev"
+        "burriko/cake-soft-delete": "2.0.*@dev",
+        "eberfreitas/cakephp-slugomatic": "dev-master"
     },
     "config": {
         "vendor-dir": "Vendor/"
