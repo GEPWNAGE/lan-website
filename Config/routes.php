@@ -23,6 +23,7 @@
 	Router::connect('/:language/', array('controller' => 'pages', 'action' => 'display', 'home'), array('language' => $languages));
 
 	Router::connect('/admin/', array('controller' => 'pages', 'action' => 'index', 'prefix' => 'admin'));
+	Router::connect('/:language/:slug', array('controller' => 'pages', 'action' => 'display'), array("pass" => array("slug"), 'language' => $languages), array("slug" => "(?!admin)"));
 	Router::connect('/:slug', array('controller' => 'pages', 'action' => 'display'), array("pass" => array("slug")), array("slug" => "(?!admin)"));
 	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
 

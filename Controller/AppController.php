@@ -39,9 +39,6 @@ class AppController extends Controller {
         )
     );
 
-
-	public $helpers = array('Html' => array('className' => 'MyHtml'));
-
 	public function beforeFilter(){
 		parent::beforeFilter();
 
@@ -64,12 +61,14 @@ class AppController extends Controller {
     	//write the Config.language with the value from the Cookie
         if ($this->Cookie->read('lang') && !$this->Session->check('Config.language')) {
             $this->Session->write('Config.language', $this->Cookie->read('lang'));
+            Configure::write('Config.language', $this->Cookie->read('lang'));
         }
         //if the user clicked the language URL
         else if (isset($this->params['language']) && ($this->params['language'] !=  $this->Session->read('Config.language'))) {
             //then update the value in Session and the one in Cookie
             $this->Session->write('Config.language', $this->params['language']);
             $this->Cookie->write('lang', $this->params['language'], false, '20 days');
+            Configure::write('Config.language', $this->Cookie->read('lang'));
         }
     }
 

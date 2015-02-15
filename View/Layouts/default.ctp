@@ -41,14 +41,16 @@
 	<header>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 col-sm-3">
-					<!-- Logo. Use class "color" to add color to the text. -->
+				<div class="col-md-6 col-sm-12">
 					<div class="logo">
-						<h1><a href="#">GEPWNAGE<span class="color bold"> LAN</span></a></h1>
-						<p class="meta">game all the things!</p>
+						<img src="/img/logo.png" alt="WAKAWAKA" style="max-height: 60px;margin-right:20px;"/>
+						<div class="pull-left">
+							<h1><a href="#">GEPWNAGE<span class="color bold"> LAN</span></a></h1>
+							<p class="meta">game all the things!</p>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-8 col-sm-9">
+				<div class="col-md-12">
 					<!-- Navigation -->
 					<div class="navbar bs-docs-nav" role="banner">
 						<div class="navbar-header">
@@ -62,46 +64,16 @@
 
 						<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 							<ul class="nav navbar-nav navbar-right">
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										<li><a href="index.html">Home #1</a></li>
-										<li><a href="index1.html">Home #2</a></li>
-										<li><a href="index-rslider.html">Home #3</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										<li><a href="404-1.html">404</a></li>
-										<li><a href="about1.html">About</a></li>
-										<li><a href="faq.html">FAQ</a></li>
-										<li><a href="features2.html">Features</a></li>
-										<li><a href="login.html">Login</a></li>
-										<li><a href="faq.html">FAQ</a></li>
-										<li><a href="pricing1.html">Pricing Table</a></li>
-										<li><a href="process.html">Process</a></li>
-										<li><a href="project.html">Project</a></li>
-										<li><a href="register.html">Register</a></li>
-										<li><a href="support.html">Support</a></li>
-										<li><a href="testimonials.html">Testimonials</a></li>
-									</ul>
-								</li>
-
-								<li><a href="service2.html">Service</a></li>
-								<li><a href="resume.html">Resume</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										<li><a href="blog1.html">Blog</a></li>
-										<li><a href="blog3.html">Blog Box</a></li>
-										<li><a href="blog-3col.html">Blog 3 Column</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
-									</ul>
-								</li>
-
-								<li><a href="portfolio1.html">Portfolio</a></li>
-								<li><a href="contactus1.html">Contact</a></li>
+								<?php $menu = Configure::read("Menu");
+								foreach($menu[$this->params['language'] ?: "nld"] as $menuItem){?>
+									<li><a href="<?= is_array($menuItem['url']) ? $this->Html->url($menuItem['url']) : $menuItem['url'];?>"><?= $menuItem['title']; ?></a></li>
+								<?php } ?>
+								<li><a href="http://www.gepwnage.nl" target="_blank">GEPWNAGE.nl</a></li>
+								<?php if(($this->params['language'] ?: "nl") == "nl"){?>
+									<li><a href="/en/"><img src="http://lan.gepwnage.nl/img/en.png"/>&nbsp;&nbsp;English</a></li>
+								<?php } else {?>
+									<li><a href="/"><img src="http://lan.gepwnage.nl/img/nl.png"/>&nbsp;&nbsp;Nederlands</a></li>
+								<?php } ?>
 							</ul>
 						</nav>
 					</div>
@@ -131,18 +103,23 @@
 	</div>
 	<!--/ Page content ends -->
 
-	<!-- Footer starts -->
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<!-- Copyright info -->
-					<p class="copy">Copyright &copy; <?= date("Y"); ?> | GEPWNAGE</p>
+	<div id="bottom-container">
+		<marquee style="width: 100%;position:relative;z-index: 10;" scrollamount="5" loop="-1" direction="right">
+			<img src="http://www.gepwnage.nl/img/15.gif">
+		</marquee>
+		<!-- Footer starts -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<!-- Copyright info -->
+						<p class="copy">&copy; 2008 - <?= date("Y"); ?> | Dispuut GEPWNAGE</p>
+					</div>
 				</div>
+				<div class="clearfix"></div>
 			</div>
-			<div class="clearfix"></div>
-		</div>
-	</footer>
+		</footer>
+	</div>
 	<!--/ Footer ends -->
 
 	<!-- Scroll to top -->

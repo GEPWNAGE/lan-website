@@ -46,7 +46,7 @@ $add = $this->request->param('action') == "admin_add";
         <div class="form-group">
             <label class="col-lg-2 control-label">Content</label>
             <div class="col-lg-5">
-                <?= $this->Form->textarea("Page.content", array("class" => "cleditor"));?>
+                <?= $this->Form->textarea("Page.content", array("class" => "cleditor", "style" => "height:500px"));?>
             </div>
         </div>
     </div>
@@ -56,3 +56,4 @@ $add = $this->request->param('action') == "admin_add";
         <?php echo $this->Html->link("Cancel", array("controller" => "pages", "action" => "index", "admin" => true), array("class" => "btn btn-sm btn-default pull-right", "style" => "margin-right: 10px;"));?>
     </div>
 <?php echo $this->Form->end();?>
+

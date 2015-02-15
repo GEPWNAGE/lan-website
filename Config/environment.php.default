@@ -6,3 +6,69 @@ Configure::write("StaticBasicAuth", array(
         "password" => "f48632e994a98fa3e78e2f5b5128ca5f63ae6f5061dc829f0229fbbe1090591f"
     )
 ));
+
+
+Configure::write("Menu", array(
+    "nl" => array(
+        array(
+            "title" => "LAN-info",
+            "url" => array(
+                "controller" => "pages",
+                "action" => "display",
+                "home"
+            )
+        ),
+        array(
+            "title" => "Wat is een LAN?",
+            "url" => array(
+                "controller" => "pages",
+                "action" => "display",
+                "slug" => "wat-is-een-lan"
+            )
+        ),
+        array(
+            "title" => "Inschrijvingen",
+            "url" => array(
+                "controller" => "pages",
+                "action" => "display",
+                "slug" => "inschrijvingen"
+            )
+        ),
+        array(
+            "title" => "Competities",
+            "url" => array(
+                "controller" => "pages",
+                "action" => "display",
+                "slug" => "competities"
+            )
+        )
+    ),
+    "en" => array(
+        array(
+            "title" => "LAN-info",
+            "url" => array(
+                "controller" => "pages",
+                "action" => "display",
+                "home"
+            )
+        ),
+        array(
+            "title" => "What is a LAN?",
+            "url" => array(
+                "controller" => "pages",
+                "action" => "display",
+                "slug" => "what-is-a-lan"
+            )
+        ),
+        array(
+            "title" => "Participants",
+            "url" => array(
+                "controller" => "pages",
+                "action" => "display",
+                "slug" => "participants"
+            )
+        ),
+    )
+));
+Configure::write("Menu.nld", Configure::read("Menu.nl"));
+Configure::write("Menu.eng", Configure::read("Menu.en"));

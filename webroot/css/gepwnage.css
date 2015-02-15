@@ -1,10 +1,28 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body{
     padding: 0px;
     border: 0px;
+    position: relative;padding-bottom: 70px;
 }
 header{
     background: #013370;
+    padding-bottom: 0px;
 }
+header .logo img{
+    float: left;
+}
+@media (max-width: 768px) {
+    header .logo img{
+        margin-bottom: 20px;
+    }
+}
+
 header .logo h1 a, header .logo h1 a:visited, header .logo h1 a:hover{
     color: white;
 }
@@ -19,4 +37,60 @@ header .navbar .nav > li > a{
 }
 header .navbar .nav > li > a:hover{
     color: #FFFF00 !important;
+}
+a, a:visited, a:hover {
+    color: #013370;
+}
+.navbar button{
+    background: #013370 !important;
+}
+.navbar button:hover{
+    background: #013370 !important;
+}
+.navbar button .icon-bar{
+    background-color: #FFFF00 !important;
+}
+.navbar .nav > li > a, .navbar .nav > li > a:visited{
+    color: white !important;
+}
+.content li i{
+    width: auto;
+}
+.totop a, .totop a:visited{
+    background-color: #013370;
+}
+h2{
+    margin-top: 20px;
+}
+.page-head{
+    background: url("/img/pacman.png") right bottom no-repeat #202020;
+    box-shadow: none;
+}
+.page-head h2{
+    font-size: 30px;
+    margin-top: 0px;
+    color: white;
+}
+.content{
+    margin-bottom: 0;
+}
+#bottom-container{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    right:0;left:0;
+}
+footer{
+    border: 0;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+    padding-top: 0;
+    background: url("http://www.gepwnage.nl/img/marioblok.png");
+    margin-top: -4px;
+    height: 16px;
+}
+footer p.copy{
+    position: relative;
+    top: -25px;
+    height: 16px;
+    margin: 0;
 }

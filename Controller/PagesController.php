@@ -59,12 +59,14 @@ class PagesController extends AppController {
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 
 		if($page == "home"){
-			$page = $this->Page->find( "first", array( "conditions" => array( "Page.homepage" => 1 ) ) );
+			$language = $this->request->param("language") ?: "nl";
+			$page = $this->Page->find( "first", array( "conditions" => array( "Page.homepage" => 1 , "Page.language" => $language) ) );
 		} else {
 			$page = $this->Page->find( "first", array( "conditions" => array( "Page.slug" => $path[0] ) ) );
 		}
         if($page){
             $title_for_layout = $page['Page']['title'];
+			$this->request->params['language'] = $page['Page']['language'];
             $this->set(compact('page', 'title_for_layout'));
         } else {
             try{
