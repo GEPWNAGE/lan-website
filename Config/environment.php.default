@@ -1,0 +1,8 @@
+<?php
+Configure::write("StaticBasicAuth", array(
+    "User" => array(
+        "username" => "GEPWNAGE",
+        //you can generate this password through the password_hash shell, below is '1337'
+        "password" => "f48632e994a98fa3e78e2f5b5128ca5f63ae6f5061dc829f0229fbbe1090591f"
+    )
+));

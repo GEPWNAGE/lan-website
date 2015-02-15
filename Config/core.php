@@ -368,3 +368,5 @@ Cache::config('_cake_model_', array(
 Configure::write('Routing.prefixes', array('admin'));
 Configure::write('Languages.available', array("en" => "eng", "nl" => "nld"));
 Configure::write('Config.language', 'nld');
+
+config("environment");

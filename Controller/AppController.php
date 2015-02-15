@@ -11,6 +11,7 @@
  */
 
 App::uses('Controller', 'Controller');
+App::uses("StaticBasicAuthenticate", "Controller/Component/Auth");
 
 /**
  * Application Controller
@@ -22,13 +23,33 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-	public $components = array("DebugKit.Toolbar", 'Cookie', 'Session');
+	public $components = array(
+        "DebugKit.Toolbar",
+        'Cookie',
+        'Session',
+        "Auth" => array(
+            "logoutRedirect" => array(
+                "controller" => "pages",
+                "action" => "display",
+                "home"
+            ),
+            "authenticate" => array(
+                "StaticBasic"
+            )
+        )
+    );
 
 
 	public $helpers = array('Html' => array('className' => 'MyHtml'));
 
 	public function beforeFilter(){
 		parent::beforeFilter();
+
+        AuthComponent::$sessionKey = false;
+
+        if($this->request->param('prefix') != "admin"){
+            $this->Auth->allow();
+        }
 
 		$this->_setLanguage();
 
