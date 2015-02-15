@@ -41,11 +41,11 @@ class Page extends AppModel{
     }
 
     public function saveReverseTranslation($data){
-        if(isset($data['Translation'][0]) && $data['Translation'][0]['id'] != ""){
+        if(isset($data['Translation']['id']) && $data['Translation']['id'] != ""){
             $this->save(
                 array(
                     'Page' => array(
-                        "id" => $data['Translation'][0]['id']
+                        "id" => $data['Translation']['id']
                     ),
                     'Translation' => array(
                         array("id" => $data['Page']['id'])

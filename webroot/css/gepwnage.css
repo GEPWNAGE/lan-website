@@ -1,0 +1,22 @@
+body{
+    padding: 0px;
+    border: 0px;
+}
+header{
+    background: #013370;
+}
+header .logo h1 a, header .logo h1 a:visited, header .logo h1 a:hover{
+    color: white;
+}
+header .logo h1 .color{
+    color: #FFFF00;
+}
+header .logo .meta{
+    color: white;
+}
+header .navbar .nav > li > a{
+    color: white !important;
+}
+header .navbar .nav > li > a:hover{
+    color: #FFFF00 !important;
+}

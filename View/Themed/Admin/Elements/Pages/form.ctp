@@ -34,7 +34,7 @@ $add = $this->request->param('action') == "admin_add";
         <div class="form-group">
             <label class="col-lg-2 control-label">Translation of</label>
             <div class="col-lg-5">
-                <?= $this->Form->input("Translation.0.id", array("class" => "form-control", "options" => $originals, 'empty' => 'nothing'));?>
+                <?= $this->Form->input("Translation.id", array("class" => "form-control", "options" => $originals, 'empty' => 'nothing', 'selected' => $this->request->data('Translation.0.id')));?>
             </div>
         </div>
         <div class="form-group">

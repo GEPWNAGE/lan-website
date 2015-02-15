@@ -58,7 +58,11 @@ class PagesController extends AppController {
 		}
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 
-        $page = $this->Page->find("first", array("conditions" => array("Page.slug" => $path[0])));
+		if($page == "home"){
+			$page = $this->Page->find( "first", array( "conditions" => array( "Page.homepage" => 1 ) ) );
+		} else {
+			$page = $this->Page->find( "first", array( "conditions" => array( "Page.slug" => $path[0] ) ) );
+		}
         if($page){
             $title_for_layout = $page['Page']['title'];
             $this->set(compact('page', 'title_for_layout'));
@@ -99,7 +103,6 @@ class PagesController extends AppController {
 	public function admin_edit($id){
 		if($this->request->is('put')){
 			if($this->Page->save($this->request->data)){
-//				debug($this->request->data);
 				$this->Page->saveReverseTranslation($this->request->data);
                 $this->redirect(array("controller" => "pages", "action" => "index", "admin" => true));
                 return;

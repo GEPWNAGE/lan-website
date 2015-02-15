@@ -24,7 +24,8 @@
 			"owl.carousel",
 			"font-awesome.min",
 			"style",
-			"blue"
+			"blue",
+			"gepwnage"
 		)
 	);
 	?>
@@ -109,8 +110,6 @@
 			</div>
 		</div>
 	</header>
-	<!-- Seperator -->
-	<div class="sep"></div>
 
 	<!-- Page heading starts -->
 	<div class="page-head">
