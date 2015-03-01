@@ -45,8 +45,7 @@
 					<div class="logo">
 						<img src="/img/logo.png" alt="WAKAWAKA" style="max-height: 60px;margin-right:20px;"/>
 						<div class="pull-left">
-							<h1><a href="#">GEPWNAGE<span class="color bold"> LAN</span></a></h1>
-							<p class="meta">game all the things!</p>
+							<h1><a href="#">GEPWNAGE<span class="color bold">LAN</span></a></h1>
 						</div>
 					</div>
 				</div>
@@ -65,8 +64,17 @@
 						<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 							<ul class="nav navbar-nav navbar-right">
 								<?php $menu = Configure::read("Menu");
-								foreach($menu[$this->params['language'] ?: "nld"] as $menuItem){?>
-									<li><a href="<?= is_array($menuItem['url']) ? $this->Html->url($menuItem['url']) : $menuItem['url'];?>"><?= $menuItem['title']; ?></a></li>
+								foreach($menu[$this->params['language'] ?: "nld"] as $menuItem){
+                                    $class = "";
+                                    if(($this->params['pass'][0] == 'home' && Hash::get($menuItem, 'url.0') == 'home') || ($menuItem['url']['controller'] == $this->params['controller']
+                                        && $menuItem['url']['action'] == $this->params['action']
+                                        && Hash::get($menuItem, 'url.slug') == $this->params['pass'][0])){
+                                        $class = "active";
+                                    }
+                                    ?>
+									<li>
+                                        <a href="<?= is_array($menuItem['url']) ? $this->Html->url($menuItem['url']) : $menuItem['url'];?>" class="<?=$class?>"><?= $menuItem['title']; ?></a>
+                                    </li>
 								<?php } ?>
 								<li><a href="http://www.gepwnage.nl" target="_blank">GEPWNAGE.nl</a></li>
 								<?php if(($this->params['language'] ?: "nl") == "nl"){?>

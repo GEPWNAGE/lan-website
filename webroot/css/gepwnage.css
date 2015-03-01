@@ -9,6 +9,7 @@ body{
     padding: 0px;
     border: 0px;
     position: relative;padding-bottom: 70px;
+    min-width: 320px;
 }
 header{
     background: #013370;
@@ -19,12 +20,43 @@ header .logo img{
 }
 @media (max-width: 768px) {
     header .logo img{
-        margin-bottom: 20px;
+        margin-bottom: 13px;
+    }
+    .navbar{
+        margin-top:0px;
+    }
+    .page-head{
+        padding-bottom: 30px;
+        background-size: 30% !important;
     }
 }
-
+@media (max-width: 480px) {
+    .page-head{
+        padding-bottom: 25px;
+        background-size: 50% !important;
+    }
+    header .logo h1 a{
+        font-size: 30px !important;
+        margin-top: 0px !important;
+    }
+    header .logo img{
+        max-height: 30px !important;
+        margin-top: 10px;
+    }
+}
+header .logo{
+    padding-top: 0px;
+}
+header .logo .color{
+    padding-left: 10px;
+}
 header .logo h1 a, header .logo h1 a:visited, header .logo h1 a:hover{
     color: white;
+    font-family: "Courier New", Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    margin-top: 6px;
+    display: inline-block;
 }
 header .logo h1 .color{
     color: #FFFF00;
@@ -52,6 +84,9 @@ a, a:visited, a:hover {
 }
 .navbar .nav > li > a, .navbar .nav > li > a:visited{
     color: white !important;
+}
+.navbar .nav > li > a.active{
+    color: #FFFF00 !important;
 }
 .content li i{
     width: auto;
