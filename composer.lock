@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "df20677fd6c94c49fbe079f51a6ef9a9",
+    "hash": "3f24635464dbe9d81c9b50274d5e3bb6",
     "packages": [
         {
             "name": "burriko/cake-soft-delete",
@@ -54,16 +54,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "2.6.1",
+            "version": "2.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "09e5e43d0950bcee1b1792bc1355492024a5e54c"
+                "reference": "3fee5b9eaafdcca986f776129aef7c2c04c427df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/09e5e43d0950bcee1b1792bc1355492024a5e54c",
-                "reference": "09e5e43d0950bcee1b1792bc1355492024a5e54c",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/3fee5b9eaafdcca986f776129aef7c2c04c427df",
+                "reference": "3fee5b9eaafdcca986f776129aef7c2c04c427df",
                 "shasum": ""
             },
             "require": {
@@ -93,7 +93,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-01-16 02:36:35"
+            "time": "2015-02-19 12:34:27"
         },
         {
             "name": "cakephp/debug_kit",
@@ -146,16 +146,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.20",
+            "version": "v1.0.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3"
+                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/1bff8aa77a18f3616f468ed8000cf86a5725bac3",
-                "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
+                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
                 "shasum": ""
             },
             "replace": {
@@ -201,6 +201,7 @@
                 "Thelia",
                 "WolfCMS",
                 "agl",
+                "aimeos",
                 "annotatecms",
                 "bitrix",
                 "cakephp",
@@ -236,7 +237,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-01-11 03:51:11"
+            "time": "2015-02-18 17:17:01"
         },
         {
             "name": "eberfreitas/cakephp-slugomatic",
@@ -279,6 +280,49 @@
                 "slug"
             ],
             "time": "2014-06-26 19:46:31"
+        },
+        {
+            "name": "imsamurai/cakephp-serializable-behaviour",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imsamurai/cakephp-serializable-behaviour.git",
+                "reference": "47f491a24961be959af483be24b630c27657751e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imsamurai/cakephp-serializable-behaviour/zipball/47f491a24961be959af483be24b630c27657751e",
+                "reference": "47f491a24961be959af483be24b630c27657751e",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "Serializable"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shamray Alexander",
+                    "email": "im.samuray@gmail.com",
+                    "homepage": "https://imsamurai.me",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Behavior for saving and reading serialized data from/into database",
+            "homepage": "http://github.com/imsamurai/cakephp-serializable-behaviour",
+            "keywords": [
+                "behaviour",
+                "cakephp",
+                "database",
+                "serializable"
+            ],
+            "time": "2014-09-19 11:42:01"
         }
     ],
     "packages-dev": [],

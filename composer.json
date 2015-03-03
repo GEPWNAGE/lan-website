@@ -5,7 +5,8 @@
         "cakephp/cakephp": "2.6.*",
         "cakephp/debug_kit": "2.2.*",
         "burriko/cake-soft-delete": "2.0.*@dev",
-        "eberfreitas/cakephp-slugomatic": "dev-master"
+        "eberfreitas/cakephp-slugomatic": "dev-master",
+        "imsamurai/cakephp-serializable-behaviour": "1.0.2"
     },
     "config": {
         "vendor-dir": "Vendor/"
