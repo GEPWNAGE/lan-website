@@ -41,7 +41,7 @@
 	<header>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-sm-12">
+				<div class="col-md-6 col-sm-8 clearfix">
 					<div class="logo">
 						<img src="/img/logo.png" alt="WAKAWAKA" style="max-height: 60px;margin-right:20px;"/>
 						<div class="pull-left">
@@ -49,6 +49,11 @@
 						</div>
 					</div>
 				</div>
+                <div class="col-md-6 col-sm-4 clearfix">
+                    <div class="pull-right" style="padding-top: 15px;">
+                        <img src="/img/deloitte.png" alt="ft. Deloitte"/>
+                    </div>
+                </div>
 				<div class="col-md-12">
 					<!-- Navigation -->
 					<div class="navbar bs-docs-nav" role="banner">
