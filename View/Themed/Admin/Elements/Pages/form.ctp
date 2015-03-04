@@ -25,6 +25,12 @@ $add = $this->request->param('action') == "admin_add";
                 <?= $this->Form->input("Page.slug", array("class" => "form-control"));?>
             </div>
         </div>
+	    <div class="form-group">
+		    <label class="col-lg-2 control-label">Facebook image (empty is default)</label>
+		    <div class="col-lg-5">
+			    <?= $this->Form->input("Page.info.facebook_og", array("class" => "form-control"));?>
+		    </div>
+	    </div>
         <div class="form-group">
             <label class="col-lg-2 control-label">Language</label>
             <div class="col-lg-5">

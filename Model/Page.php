@@ -13,6 +13,12 @@ class Page extends AppModel{
         )
     );
 
+	public $actsAs = array(
+		'Serializable.Serializable' => array(
+			'fields' => array("info")
+		)
+	);
+
     /**
      * @param bool $created
      * @param array $options
