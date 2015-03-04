@@ -42,6 +42,12 @@ if($edit){
 			<?= $this->Form->input("Participant.info.payed", array("type" => "checkbox", "style" => "margin-top: 11px;"));?>
 		</div>
 	</div>
+	<div class="form-group">
+		<label class="col-lg-2 control-label">Opmerking</label>
+		<div class="col-lg-5">
+			<?= $this->Form->textarea("Participant.info.note", array("class" => "form-control"));?>
+		</div>
+	</div>
 </div>
 <div class="widget-foot clearfix">
 	<!-- Footer goes here -->

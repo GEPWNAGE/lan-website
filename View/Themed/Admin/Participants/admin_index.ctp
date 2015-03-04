@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * @var View $this
  * @var array $pages
@@ -23,6 +23,7 @@
 								<th>Laptop/PC</th>
 								<th>Slaapplek</th>
 								<th>Betaald</th>
+								<th>Opmerking</th>
 								<th></th>
 							</tr>
 						</thead>
@@ -39,6 +40,7 @@
 									<td><?= Hash::get($p, 'Participant.info.laptop', true) ? "Laptop" : "PC"; ?></td>
 									<td><?= Hash::get($p, 'Participant.info.bed', true) ? "Ja" : "Nee"; ?></td>
 									<td><?= Hash::get($p, 'Participant.info.payed', true) ? "Ja" : "Nee"; ?></td>
+									<td><p style="max-width: 75px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><?= Hash::get($p, 'Participant.info.note') ?></p></td>
 									<td>
 										<?= $this->Html->link("edit", array("controller" => "participants", "action" => "edit", "admin" => true, $p['Participant']['id']));?>
 										<?= $this->Html->link("delete", array("controller" => "participants", "action" => "delete", "admin" => true, $p['Participant']['id']), null, "Weet je zeker dat je ".$p['Participant']['name']." wilt verwijderen?");?>
