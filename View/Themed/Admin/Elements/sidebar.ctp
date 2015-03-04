@@ -13,7 +13,6 @@ $controller = $this->request->param('controller');
     <!-- If the main navigation has sub navigation, then add the class "has_sub" to "li" of main navigation. -->
     <ul id="nav">
         <!-- Main menu with font awesome icon -->
-        <li><a href="index.html"><i class="fa fa-home"></i> Dashboard</a></li>
         <li class="has_sub <?= !in_array($controller, array("pages")) ?: "open"?>">
             <a href="#"><i class="fa fa-file-o"></i> Website Content <span class="pull-right"><i class="fa fa-chevron-right"></i></span></a>
             <ul>
@@ -21,17 +20,13 @@ $controller = $this->request->param('controller');
                 <li><a href="#">Menus</a></li>
             </ul>
         </li>
-        <li class="has_sub <?= !in_array($controller, array("competitions")) ?: "open"?>">
-            <a href="#"><i class="fa fa-bolt"></i> Competitions <span class="pull-right"><i class="fa fa-chevron-right"></i></span></a>
-            <ul>
-                <li><a href="media.html">Media</a></li>
-                <li><a href="statement.html">Statement</a></li>
-                <li><a href="error.html">Error</a></li>
-                <li><a href="error-log.html">Error Log</a></li>
-                <li><a href="calendar.html">Calendar</a></li>
-                <li><a href="grid.html">Grid</a></li>
-            </ul>
-        </li>
+	    <li class="has_sub <?= !in_array($controller, array("participants")) ?: "open"?>">
+		    <a href="#"><i class="fa fa-male"></i> Deelnemers <span class="pull-right"><i class="fa fa-chevron-right"></i></span></a>
+		    <ul>
+			    <li><a href="<?php echo $this->Html->url(array("controller" => "participants", "action" => "index", "admin" => true));?>">Lijst</a></li>
+			    <li><a href="<?php echo $this->Html->url(array("controller" => "participants", "action" => "add", "admin" => true));?>">Nieuw</a></li>
+		    </ul>
+	    </li>
     </ul>
 </div>
 

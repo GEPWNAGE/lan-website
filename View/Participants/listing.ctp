@@ -22,7 +22,7 @@ $i = 0;
             <tr class="one">
                 <td style="text-align: right;"><?= $i + 1 ?></td>
                 <td style="text-align: center;">
-                    <?php if($p['Participant']['info']['relation'] != "Overig"){?>
+                    <?php if($p['Participant']['info']['relation'] != "Overig" && !empty($p['Participant']['info']['relation'])){?>
                         <img title="<?=$p['Participant']['info']['relation']?>" src="/img/rel/<?=strtolower(str_replace(".", "", $p['Participant']['info']['relation']))?>.png">
                     <?php } ?>
                 </td>

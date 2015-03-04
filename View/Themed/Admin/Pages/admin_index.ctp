@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * @var View $this
  * @var array $pages
