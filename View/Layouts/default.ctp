@@ -34,6 +34,9 @@
 	<meta property="og:url"             content="<?=  Router::url( $this->here, true ); ?>" />
 	<meta property="og:title"           content="<?= $title_for_layout ?>" />
 	<meta property="og:image"           content="<?= isset($page) && Hash::get($page, "Page.info.facebook_og") ? Hash::get($page, "Page.info.facebook_og") : "http://static.gepwnage.nl/og_default.png"?>" />
+	<?php if(isset($page) && Hash::get($page, "Page.info.facebook_description")){?>
+		<meta property="og:description"     content="<?= Hash::get($page, "Page.info.facebook_description") ?>" />
+	<?php } ?>
 
 	<!--[if lt IE 9]>
 	<? echo $this->Html->script("html5shiv.js"); ?>

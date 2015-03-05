@@ -31,6 +31,12 @@ $add = $this->request->param('action') == "admin_add";
 			    <?= $this->Form->input("Page.info.facebook_og", array("class" => "form-control"));?>
 		    </div>
 	    </div>
+	    <div class="form-group">
+		    <label class="col-lg-2 control-label">Facebook description (empty = facebook algorithm)</label>
+		    <div class="col-lg-5">
+			    <?= $this->Form->textarea("Page.info.facebook_description", array("class" => "form-control"));?>
+		    </div>
+	    </div>
         <div class="form-group">
             <label class="col-lg-2 control-label">Language</label>
             <div class="col-lg-5">
