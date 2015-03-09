@@ -81,6 +81,7 @@ class ParticipantsController extends AppController{
 			$email = new CakeEmail();
 			$email->from(array('lan@gepwnage.nl' => 'GEPWNAGE'));
 			$email->subject($this->request->data("Email.Subject"));
+			$email->emailFormat('html');
 			$count = 0;
 			$fail = array();
 			foreach($this->request->data("Email.participant") as $id => $val){
