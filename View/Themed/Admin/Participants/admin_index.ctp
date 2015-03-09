@@ -20,6 +20,7 @@
 								<th>ID</th>
 								<th>Relatie</th>
 								<th>Naam</th>
+								<th>Email</th>
 								<th>Laptop/PC</th>
 								<th>Slaapplek</th>
 								<th>Betaald</th>
@@ -37,6 +38,7 @@
 										<?php } ?>
 									</td>
 									<td><?= $p['Participant']['name']; ?></td>
+									<td><?= $p['Participant']['email']; ?></td>
 									<td><?= Hash::get($p, 'Participant.info.laptop', true) ? "Laptop" : "PC"; ?></td>
 									<td><?= Hash::get($p, 'Participant.info.bed', true) ? "Ja" : "Nee"; ?></td>
 									<td><?= Hash::get($p, 'Participant.info.payed', true) ? "Ja" : "Nee"; ?></td>
