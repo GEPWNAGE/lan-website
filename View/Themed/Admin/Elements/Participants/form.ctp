@@ -19,6 +19,12 @@ if($edit){
 		</div>
 	</div>
 	<div class="form-group">
+		<label class="col-lg-2 control-label">E-mail</label>
+		<div class="col-lg-5">
+			<?= $this->Form->input("Participant.email", array("class" => "form-control"));?>
+		</div>
+	</div>
+	<div class="form-group">
 		<label class="col-lg-2 control-label">Relatie</label>
 		<div class="col-lg-5">
 			<?= $this->Form->select("Participant.info.relation", $relations, array("class" => "form-control"));?>
