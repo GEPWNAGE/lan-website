@@ -83,6 +83,12 @@
             <!-- Matter -->
             <div class="matter">
                 <div class="container">
+		            <?php $flash = $this->Session->flash();
+		            if(!empty($flash)){?>
+			            <div class="alert alert-info" role="alert">
+				            <?= $flash ?>
+			            </div>
+		            <?php } ?>
                     <? echo $this->fetch("content"); ?>
                 </div>
             </div>

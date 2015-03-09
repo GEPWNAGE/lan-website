@@ -25,6 +25,7 @@ $controller = $this->request->param('controller');
 		    <ul>
 			    <li><a href="<?php echo $this->Html->url(array("controller" => "participants", "action" => "index", "admin" => true));?>">Lijst</a></li>
 			    <li><a href="<?php echo $this->Html->url(array("controller" => "participants", "action" => "add", "admin" => true));?>">Nieuw</a></li>
+			    <li><a href="<?php echo $this->Html->url(array("controller" => "participants", "action" => "mail", "admin" => true));?>">Mail</a></li>
 		    </ul>
 	    </li>
     </ul>
