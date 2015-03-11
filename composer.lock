@@ -245,12 +245,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eberfreitas/cakephp-slugomatic.git",
-                "reference": "aa9edd8f0f0c5612b4fbb32a09cf30a7b8ac5136"
+                "reference": "26de0c8f73b469634bbe9f128e7452d65009b58e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eberfreitas/cakephp-slugomatic/zipball/aa9edd8f0f0c5612b4fbb32a09cf30a7b8ac5136",
-                "reference": "aa9edd8f0f0c5612b4fbb32a09cf30a7b8ac5136",
+                "url": "https://api.github.com/repos/eberfreitas/cakephp-slugomatic/zipball/26de0c8f73b469634bbe9f128e7452d65009b58e",
+                "reference": "26de0c8f73b469634bbe9f128e7452d65009b58e",
                 "shasum": ""
             },
             "require": {
@@ -279,7 +279,7 @@
                 "seo",
                 "slug"
             ],
-            "time": "2014-06-26 19:46:31"
+            "time": "2015-03-09 16:28:09"
         },
         {
             "name": "imsamurai/cakephp-serializable-behaviour",

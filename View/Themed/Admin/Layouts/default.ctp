@@ -22,7 +22,6 @@
             "prettyPhoto.css",
             "rateit.css",
             "bootstrap-datetimepicker.min.css",
-            "jquery.cleditor.css",
             "jquery.dataTables.css",
             "jquery.onoff.css",
             "style_admin.css",
@@ -131,6 +130,9 @@
         "jquery.prettyPhoto.js",
         "jquery.slimscroll.min.js",
         "jquery.dataTables.min.js",
+	    "tinymce.min.js",
+	    "jquery.tinymce.min.js",
+	    "tinymce/themes/modern/theme.min.js",
     )
 ); ?>
 
@@ -160,7 +162,6 @@
 <? echo $this->Html->script(
     array(
         "sparklines.js",
-        "jquery.cleditor.min.js",
         "bootstrap-datetimepicker.min.js",
         "jquery.onoff.min.js",
         "filter.js",
@@ -168,6 +169,17 @@
         "charts.js",
     )
 ); ?>
+
+	<script>
+		$(document).ready(function(){
+			$("textarea.tinymce").tinymce({
+				theme: 'modern',
+				plugins: [
+					"code"
+				]
+			});
+		});
+	</script>
 
 </body>
 </html>

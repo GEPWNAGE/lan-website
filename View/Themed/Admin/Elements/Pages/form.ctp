@@ -14,51 +14,51 @@ $add = $this->request->param('action') == "admin_add";
     <div class="padd">
         <!-- Content goes here -->
         <div class="form-group">
-            <label class="col-lg-2 control-label">Title</label>
-            <div class="col-lg-5">
+            <label class="col-lg-3 control-label">Title</label>
+            <div class="col-lg-7">
                 <?= $this->Form->input("Page.title", array("class" => "form-control"));?>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-lg-2 control-label">Slug</label>
-            <div class="col-lg-5">
+            <label class="col-lg-3 control-label">Slug</label>
+            <div class="col-lg-7">
                 <?= $this->Form->input("Page.slug", array("class" => "form-control"));?>
             </div>
         </div>
 	    <div class="form-group">
-		    <label class="col-lg-2 control-label">Facebook image (empty is default)</label>
-		    <div class="col-lg-5">
+		    <label class="col-lg-3 control-label">Facebook image (empty is default)</label>
+		    <div class="col-lg-7">
 			    <?= $this->Form->input("Page.info.facebook_og", array("class" => "form-control"));?>
 		    </div>
 	    </div>
 	    <div class="form-group">
-		    <label class="col-lg-2 control-label">Facebook description (empty = facebook algorithm)</label>
-		    <div class="col-lg-5">
+		    <label class="col-lg-3 control-label">Facebook description (empty = facebook algorithm)</label>
+		    <div class="col-lg-7">
 			    <?= $this->Form->textarea("Page.info.facebook_description", array("class" => "form-control"));?>
 		    </div>
 	    </div>
         <div class="form-group">
-            <label class="col-lg-2 control-label">Language</label>
-            <div class="col-lg-5">
+            <label class="col-lg-3 control-label">Language</label>
+            <div class="col-lg-7">
                 <?= $this->Form->input("Page.language", array("class" => "form-control", "options" => Configure::read("Languages.available")));?>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-lg-2 control-label">Translation of</label>
-            <div class="col-lg-5">
+            <label class="col-lg-3 control-label">Translation of</label>
+            <div class="col-lg-7">
                 <?= $this->Form->input("Translation.id", array("class" => "form-control", "options" => $originals, 'empty' => 'nothing', 'selected' => $this->request->data('Translation.0.id')));?>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-lg-2 control-label">Homepage</label>
-            <div class="col-lg-5">
+            <label class="col-lg-3 control-label">Homepage</label>
+            <div class="col-lg-7">
                 <?= $this->Form->input("Page.homepage", array("style" => "margin-top: 11px;"));?>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-lg-2 control-label">Content</label>
-            <div class="col-lg-5">
-                <?= $this->Form->textarea("Page.content", array("class" => "cleditor", "style" => "height:500px"));?>
+            <label class="col-lg-3 control-label">Content</label>
+            <div class="col-lg-7">
+                <?= $this->Form->textarea("Page.content", array("class" => "tinymce", "style" => "height:500px"));?>
             </div>
         </div>
     </div>
