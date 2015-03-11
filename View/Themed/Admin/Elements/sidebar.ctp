@@ -28,6 +28,13 @@ $controller = $this->request->param('controller');
 			    <li><a href="<?php echo $this->Html->url(array("controller" => "participants", "action" => "mail", "admin" => true));?>">Mail</a></li>
 		    </ul>
 	    </li>
+	    <li class="has_sub <?= !in_array($controller, array("competitions")) ?: "open"?>">
+		    <a href="#"><i class="fa fa-trophy"></i> Competitions <span class="pull-right"><i class="fa fa-chevron-right"></i></span></a>
+		    <ul>
+			    <li><a href="<?php echo $this->Html->url(array("controller" => "competitions", "action" => "index", "admin" => true));?>">Lijst</a></li>
+			    <li><a href="<?php echo $this->Html->url(array("controller" => "competitions", "action" => "add", "admin" => true));?>">Nieuw</a></li>
+		    </ul>
+	    </li>
     </ul>
 </div>
 
