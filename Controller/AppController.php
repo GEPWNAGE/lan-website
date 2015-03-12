@@ -48,6 +48,11 @@ class AppController extends Controller {
             $this->Auth->allow();
         }
 
+		if($this->request->param('controller') != "gamers" && $this->request->param('action') != "add"){// && preg_match("/^10\.37\.42\./", $_SERVER["REMOTE_ADDR"])){
+			$this->redirect(array("controller" => "gamers", "action" => "add"));
+			return;
+		}
+
 		$this->_setLanguage();
 
 		//set admin theme if in admin environment

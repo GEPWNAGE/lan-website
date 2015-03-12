@@ -12,7 +12,7 @@ class Competition extends AppModel{
 		)
 	);
 
-	public $hasAndBelongsToMany = array("Participant");
+	public $hasAndBelongsToMany = array("Gamer");
 
 	/**
 	 * static enum: Model::function()

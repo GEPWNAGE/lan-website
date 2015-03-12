@@ -6,7 +6,7 @@ class CompetitionsController extends AppController{
 	public function beforeFilter(){
 		$title_for_layout = "Competitions";
 		$icon_for_layout = "trophy";
-		$this->set(compact(array("title_for_layout", "icon_for_layout", "relations")));
+		$this->set(compact(array("title_for_layout", "icon_for_layout")));
 		parent::beforeFilter();
 	}
 

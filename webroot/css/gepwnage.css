@@ -129,3 +129,8 @@ footer p.copy{
     height: 16px;
     margin: 0;
 }
+
+.error-message{
+    color: red;
+    padding-top: 10px;
+}

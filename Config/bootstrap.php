@@ -107,3 +107,6 @@ CakeLog::config('error', array(
 ));
 
 CakePlugin::loadAll();
+
+
+Configure::write('localmode', preg_match("/^10\.37\.42\./", $_SERVER["REMOTE_ADDR"]));
