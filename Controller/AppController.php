@@ -39,6 +39,8 @@ class AppController extends Controller {
         )
     );
 
+	public $uses = array("Gamer");
+
 	public function beforeFilter(){
 		parent::beforeFilter();
 
@@ -48,9 +50,38 @@ class AppController extends Controller {
             $this->Auth->allow();
         }
 
-		if($this->request->param('controller') != "gamers" && $this->request->param('action') != "add" && preg_match("/^10\.37\.42\./", $_SERVER["REMOTE_ADDR"])){
-			$this->redirect(array("controller" => "gamers", "action" => "add"));
+		if(preg_match("/^10\.37\.42\./", $this->request->clientIp())){
+			$this->redirect("http://registration.gepwnage.lan");
 			return;
+		}
+
+		Configure::write("localmode", (preg_match("/^10\.13\.37\./", $this->request->clientIp()) || true));
+
+		if(Configure::read("localmode")){
+			Configure::write("currentGamer", $this->Gamer->findByIp($this->request->clientIp()));
+			$this->set("currentGamer", Configure::read("currentGamer"));
+			Configure::write("Menu", array(
+				"nl" => array(
+					array(
+						"title" => "Competities",
+						"url" => array(
+							"controller" => "competitions",
+							"action" => "index",
+						)
+					),
+				),
+				"en" => array(
+					array(
+						"title" => "Competitions",
+						"url" => array(
+							"controller" => "competitions",
+							"action" => "index",
+						)
+					),
+				)
+			));
+			Configure::write("Menu.nld", Configure::read("Menu.nl"));
+			Configure::write("Menu.eng", Configure::read("Menu.en"));
 		}
 
 		$this->_setLanguage();
@@ -79,7 +110,7 @@ class AppController extends Controller {
 
 	//override redirect
 	public function redirect( $url, $status = NULL, $exit = true ) {
-        if (!isset($url['language']) && $this->Session->check('Config.language')) {
+        if (is_array($url) && !isset($url['language']) && $this->Session->check('Config.language')) {
             $url['language'] = $this->Session->read('Config.language');
         }
         parent::redirect($url,$status,$exit);

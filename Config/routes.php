@@ -22,6 +22,9 @@
 	Router::connect('/:language/:controller', array('action' => 'index'), array('language' => $languages));
 	Router::connect('/:language/', array('controller' => 'pages', 'action' => 'display', 'home'), array('language' => $languages));
 
+	Router::connect("/competitions/:slug", array("controller" => "competitions", "action" => "index"), array("pass" => array("slug")));
+	Router::connect("/competitions/", array("controller" => "competitions", "action" => "index"));
+
 	Router::connect('/admin/', array('controller' => 'pages', 'action' => 'index', 'prefix' => 'admin'));
 	Router::connect('/:language/:slug', array('controller' => 'pages', 'action' => 'display'), array("pass" => array("slug"), 'language' => $languages), array("slug" => "(?!admin)"));
 	Router::connect('/:slug', array('controller' => 'pages', 'action' => 'display'), array("pass" => array("slug")), array("slug" => "(?!admin)"));

@@ -9,9 +9,7 @@ class Gamer extends AppModel{
 		),
 	);
 
-	public $hasAndBelongsToMany = array("Competition");
-
-	public $hasMany = array("RegistrationKey");
+	public $hasMany = array("CompetitionRegistration");
 
 	public $validate = array(
 		"name" => array(

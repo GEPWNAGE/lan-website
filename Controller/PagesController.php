@@ -24,13 +24,6 @@ App::uses('AppController', 'Controller');
 class PagesController extends AppController {
 
 /**
- * This controller does not use a model
- *
- * @var array
- */
-	public $uses = array();
-
-/**
  * Displays a view
  *
  * @return void

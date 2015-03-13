@@ -91,11 +91,15 @@
 											<a href="<?= is_array( $menuItem['url'] ) ? $this->Html->url( $menuItem['url'] ) : $menuItem['url']; ?>" class="<?= $class ?>"><?= $menuItem['title']; ?></a>
 										</li>
 									<?php } ?>
-									<li><a href="http://www.gepwnage.nl" target="_blank">GEPWNAGE.nl</a></li>
-									<?php if ( ( $this->params['language'] ?: "nl" ) == "nl" ) { ?>
-										<li><a href="/en/"><img src="http://lan.gepwnage.nl/img/en.png"/>&nbsp;&nbsp;English</a></li>
-									<?php } else { ?>
-										<li><a href="/"><img src="http://lan.gepwnage.nl/img/nl.png"/>&nbsp;&nbsp;Nederlands</a></li>
+									<?php if(!Configure::read( 'localmode' ) ) { ?>
+										<li><a href="http://www.gepwnage.nl" target="_blank">GEPWNAGE.nl</a></li>
+										<?php if ( ( $this->params['language'] ?: "nl" ) == "nl" ) { ?>
+											<li><a href="/en/"><img src="http://lan.gepwnage.nl/img/en.png"/>&nbsp;&nbsp;English</a>
+											</li>
+										<?php } else { ?>
+											<li><a href="/"><img src="http://lan.gepwnage.nl/img/nl.png"/>&nbsp;&nbsp;Nederlands</a>
+											</li>
+										<?php } ?>
 									<?php } ?>
 								</ul>
 							<?php } ?>

@@ -32,7 +32,7 @@
 									<td><?= $c['Competition']['name']; ?></td>
 									<td><?= Competition::gameModes($c['Competition']['score_mode']); ?></td>
 									<td><?= $c['Competition']['players_per_team']; ?></td>
-									<td><?= count($c['Participant']); ?></td>
+									<td><?= count($c['CompetitionRegistration']); ?></td>
 									<td>
 										<?= $this->Html->link("edit", array("controller" => "competitions", "action" => "edit", "admin" => true, $c['Competition']['id']));?>
 										<?= $this->Html->link("delete", array("controller" => "competitions", "action" => "delete", "admin" => true, $c['Competition']['id']), null, "Weet je zeker dat je ".$c['Competition']['name']." wilt verwijderen?");?>
