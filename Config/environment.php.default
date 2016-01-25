@@ -68,7 +68,16 @@ Configure::write("Menu", array(
                 "slug" => "participants"
             )
         ),
+        array(
+            "title" => "Competitions",
+            "url" => array(
+                "controller" => "pages",
+                "action" => "display",
+                "slug" => "competitions"
+            )
+        )
     )
 ));
 Configure::write("Menu.nld", Configure::read("Menu.nl"));
 Configure::write("Menu.eng", Configure::read("Menu.en"));
+Configure::write('debug', 0);
